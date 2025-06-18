@@ -1,7 +1,7 @@
 "use client";
 
 import { useDashboard } from "@/hooks/dashboard/useDashboard";
-import { FiUsers, FiBookOpen, FiGrid, FiClock } from "react-icons/fi";
+import { FiUsers, FiBookOpen, FiGrid } from "react-icons/fi";
 import Link from "next/link";
 
 export default function AdminDashboardPage() {
