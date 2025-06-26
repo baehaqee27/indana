@@ -35,24 +35,24 @@ export default function Footer() {
             <h4 className="font-semibold mb-4">Tautan Cepat</h4>
             <ul className="space-y-2">
               <li>
-                <Link
-                  href="/tentang"
-                  className="text-gray-400 hover:text-white"
-                >
+                <Link href="/about" className="text-gray-400 hover:text-white">
                   Tentang Kami
                 </Link>
               </li>
               <li>
                 {/* Penyesuaian: Mengganti Akademik menjadi Program */}
                 <Link
-                  href="/program"
+                  href="/academics"
                   className="text-gray-400 hover:text-white"
                 >
                   Program
                 </Link>
               </li>
               <li>
-                <Link href="/galeri" className="text-gray-400 hover:text-white">
+                <Link
+                  href="/gallery"
+                  className="text-gray-400 hover:text-white"
+                >
                   Galeri
                 </Link>
               </li>
