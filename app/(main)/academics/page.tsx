@@ -124,7 +124,7 @@ export default function AcademicsPage() {
       </section>
 
       {/* Extra Activities Section */}
-      <section className="bg-gradient-to-r from-teal-800 to-teal-900 py-24 my-16">
+      <section className="bg-gradient-to-r from-teal-800 to-teal-900 py-24 ">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-white mb-8">
             Program Pengembangan
