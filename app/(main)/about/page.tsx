@@ -5,14 +5,14 @@ import { FiStar } from "react-icons/fi";
 
 export default function AboutPage() {
   const gallery = [
-    { src: "/images/school1.jpg", alt: "Gedung Sekolah" },
-    { src: "/images/lab.jpg", alt: "Laboratorium" },
-    { src: "/images/library.jpg", alt: "Perpustakaan" },
-    { src: "/images/sport.jpg", alt: "Fasilitas Olahraga" },
-    { src: "/images/classroom.jpg", alt: "Ruang Kelas" },
-    { src: "/images/canteen.jpg", alt: "Kantin" },
-    { src: "/images/mosque.jpg", alt: "Masjid" },
-    { src: "/images/field.jpg", alt: "Lapangan" },
+    { src: "/galeri/1.jpg", alt: "Gedung Sekolah" },
+    { src: "/galeri/2.jpg", alt: "Laboratorium" },
+    { src: "/galeri/3.jpg", alt: "Perpustakaan" },
+    { src: "/galeri/4.jpg", alt: "Fasilitas Olahraga" },
+    { src: "/galeri/5.jpg", alt: "Ruang Kelas" },
+    { src: "/galeri/6.jpg", alt: "Kantin" },
+    { src: "/galeri/7.jpg", alt: "Masjid" },
+    { src: "/galeri/field.jpg", alt: "Lapangan" },
   ];
 
   const testimonials = [
@@ -21,7 +21,7 @@ export default function AboutPage() {
       role: "Alumni 2020, Mahasiswa UI",
       image: "/images/alumni1.jpg",
       content:
-        "SMA Harapan Bangsa memberikan fondasi yang kuat untuk masa depan saya.",
+        "TPQ Darul Quran Miftahul Jannah memberikan fondasi yang kuat untuk masa depan saya.",
     },
     // Add more testimonials...
   ];
@@ -29,15 +29,79 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-teal-800 to-teal-900 py-24 mb-16">
+      <section className="bg-gradient-to-r from-teal-800 to-teal-900 py-24">
         <div className="container mx-auto px-6">
           <h1 className="text-5xl font-bold text-white mb-6">
-            Tentang SMA Harapan Bangsa
+            Tentang TPQ Darul Quran Miftahul Jannah
           </h1>
           <p className="text-xl text-teal-100 max-w-3xl">
-            Didirikan pada tahun 1990, kami berkomitmen untuk menyediakan
-            pendidikan berkualitas yang membentuk generasi unggul Indonesia.
+            Didirikan sejak tahun 2018, kami berkomitmen untuk menyebarkan
+            cahaya Al-Qur'an dan membentuk generasi Qur'ani yang berakhlak
+            mulia.
           </p>
+        </div>
+      </section>
+      <section className="bg-white pb-12 md:pb-20 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Judul Bagian Sejarah */}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800">
+              Perjalanan Kami
+            </h2>
+            <p className="mt-2 text-xl text-gray-500">
+              Dari Niat Tulus Menjadi Cahaya di Tengah Masyarakat
+            </p>
+          </div>
+
+          <div className="space-y-6 text-gray-600 text-lg leading-relaxed text-justify md:px-12">
+            <p>
+              Berawal dari sebuah niat tulus, perjalanan kami dimulai dari dua
+              buah rumah yang disatukan dan diwakafkan untuk menjadi sebuah
+              pusat pendidikan Al-Qur'an. Dengan tekad yang kuat, langkah awal
+              kami diresmikan dengan berdirinya yayasan pada tanggal{" "}
+              <strong className="font-semibold text-gray-800">
+                17 September 2017
+              </strong>
+              .
+            </p>
+            <p>
+              Pintu gerbang ilmu secara resmi kami buka pada{" "}
+              <strong className="font-semibold text-gray-800">
+                18 Februari 2018
+              </strong>
+              , di mana{" "}
+              <strong className="font-semibold text-gray-800">
+                TPQ Darul Quran Miftahul Jannah
+              </strong>{" "}
+              mulai beroperasi. Langkah pertama kami dimulai dengan penuh
+              kesederhanaan, membimbing lima orang santri pertama yang merupakan
+              anak-anak dari tetangga terdekat.
+            </p>
+            <p>
+              Kala itu, kami hadir di tengah lingkungan di mana umat Islam
+              adalah minoritas. Dengan hanya 25 Kepala Keluarga Muslim, bahkan
+              jemaah di masjid terdekat hanya dapat dihitung jari, sekitar tiga
+              orang. Namun, keterbatasan itu tidak pernah menyurutkan semangat
+              kami untuk menyebarkan cahaya Al-Qur'an.
+            </p>
+            <p>
+              Alhamdulillah, seiring berjalannya waktu, berkat rahmat Allah SWT
+              dan dukungan tulus dari berbagai pihak, dakwah kecil kami diterima
+              dengan hangat. Banyak warga yang mendukung dan semakin banyak
+              keluarga Muslim yang menjadi bagian dari komunitas kami.
+            </p>
+            <p>
+              Kini, dari lima orang santri, TPQ kami telah berkembang dan
+              menjadi rumah bagi kurang lebih{" "}
+              <strong className="font-semibold text-gray-800">60 santri</strong>{" "}
+              yang bersemangat menimba ilmu. Lingkungan kami pun telah
+              bertransformasi. Syiar Islam semakin hidup, masjid kembali ramai
+              oleh jemaah, dan majelis-majelis pengajian rutin menghidupkan
+              hari-hari kami. Ini adalah bukti bahwa niat baik yang dirawat
+              dengan ikhlas akan selalu menemukan jalannya untuk tumbuh dan
+              memberikan manfaat bagi banyak orang.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -47,17 +111,16 @@ export default function AboutPage() {
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h2 className="text-3xl font-semibold text-teal-600 mb-6">Visi</h2>
             <p className="text-gray-700 text-lg leading-relaxed">
-              Menjadi lembaga pendidikan terkemuka yang menghasilkan generasi
-              unggul, berkarakter, dan siap menghadapi tantangan global.
+              Menciptakan generasi penghafal Qur'an yang berakhlaqul karimah.
             </p>
           </div>
           <div className="bg-white p-8 rounded-xl shadow-lg">
             <h2 className="text-3xl font-semibold text-teal-600 mb-6">Misi</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-4 text-lg">
-              <li>Menyelenggarakan pendidikan berkualitas tinggi</li>
-              <li>Mengembangkan potensi siswa secara optimal</li>
-              <li>Membangun karakter dan kepribadian yang kuat</li>
-              <li>Menerapkan teknologi dalam pembelajaran</li>
+              <li>Menekankan adab dan akhlaq</li>
+              <li>Mempelajari berbagai pelajaran sesuai tuntunan syar'i</li>
+              <li>Mengembangkan potensi anak pada bidangnya</li>
+              <li>Menghafal Al-Qur'an sesuai kaidah ilmu tajwid</li>
             </ul>
           </div>
         </div>
@@ -67,7 +130,7 @@ export default function AboutPage() {
       <section className="bg-gradient-to-r from-teal-800 to-teal-900 py-24 my-16">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center text-white mb-16">
-            Galeri Sekolah
+            Galeri TPQ
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {gallery.map((item, index) => (

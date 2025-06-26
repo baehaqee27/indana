@@ -9,44 +9,64 @@ export default function GalleryPage() {
 
   const images = [
     {
-      src: "/images/school1.jpg",
-      alt: "Gedung Sekolah",
+      src: "/galeri/1.jpg",
+      alt: "Gedung TPQ",
       category: "Fasilitas",
     },
     {
-      src: "/images/lab.jpg",
-      alt: "Laboratorium",
+      src: "/galeri/2.jpg",
+      alt: "Tenis Meja",
       category: "Fasilitas",
     },
     {
-      src: "/images/library.jpg",
-      alt: "Perpustakaan",
+      src: "/galeri/3.jpg",
+      alt: "Permainan Anak",
+      category: "Ekstrakurikuler",
+    },
+    {
+      src: "/galeri/4.jpg",
+      alt: "Geddung TPQ",
       category: "Fasilitas",
     },
     {
-      src: "/images/classroom.jpg",
-      alt: "Ruang Kelas Modern",
-      category: "Akademik",
+      src: "/galeri/5.jpg",
+      alt: "Kegiatan Keagamaan",
+      category: "Keagamaan",
     },
     {
-      src: "/images/sport.jpg",
-      alt: "Fasilitas Olahraga",
-      category: "Olahraga",
-    },
-    {
-      src: "/images/event1.jpg",
-      alt: "Upacara Bendera",
+      src: "/galeri/6.jpg",
+      alt: "Kegiatan Keagamaan",
       category: "Kegiatan",
     },
     {
-      src: "/images/event2.jpg",
+      src: "/galeri/7.jpg",
       alt: "Pentas Seni",
       category: "Kegiatan",
     },
     {
-      src: "/images/lab2.jpg",
-      alt: "Praktikum Kimia",
+      src: "/galeri/8.jpeg",
+      alt: "Fasilitas Olahraga",
+      category: "Olahraga",
+    },
+    {
+      src: "/galeri/9.jpeg",
+      alt: "Kegiatan Belajar Mengajar",
       category: "Akademik",
+    },
+    {
+      src: "/galeri/10.jpeg",
+      alt: "Kegiatan Mengaji",
+      category: "Akademik",
+    },
+    {
+      src: "/galeri/11.jpeg",
+      alt: "Kegiatan Mengaji",
+      category: "Akademik",
+    },
+    {
+      src: "/galeri/12.jpeg",
+      alt: "Kegiatan Keagamaan",
+      category: "Keagamaan",
     },
     // Add more images as needed
   ];
@@ -70,8 +90,8 @@ export default function GalleryPage() {
         <div className="container mx-auto px-6">
           <h1 className="text-5xl font-bold text-white mb-6">Galeri Sekolah</h1>
           <p className="text-xl text-teal-100 max-w-3xl">
-            Jelajahi fasilitas dan kegiatan di SMA Harapan Bangsa melalui
-            koleksi foto kami
+            Jelajahi fasilitas dan kegiatan di TPQ Darul Quran Miftahul Jannah
+            melalui koleksi foto kami
           </p>
         </div>
       </section>

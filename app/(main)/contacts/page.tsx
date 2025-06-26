@@ -56,22 +56,18 @@ export default function ContactPage() {
     {
       icon: FiMapPin,
       label: "Alamat",
-      value: "Jalan Pendidikan No. 123, Jakarta, 12345",
+      value:
+        "Jl. Pasir Mas Barat, Panggung Lor, Kec. Semarang Utara, Kota Semarang, Jawa Tengah 50177",
     },
     {
       icon: FiPhone,
-      label: "Telepon",
-      value: "(021) 123-4567",
+      label: "Telepon & WhatsApp",
+      value: "082227116930",
     },
     {
       icon: FiMail,
       label: "Email",
-      value: "info@smaharapanbangsa.sch.id",
-    },
-    {
-      icon: FiClock,
-      label: "Jam Operasional",
-      value: "Senin - Jumat: 07:00 - 15:00",
+      value: "darulquranmiftahuljannah@gmail.com",
     },
   ];
 
@@ -82,8 +78,9 @@ export default function ContactPage() {
         <div className="container mx-auto px-6">
           <h1 className="text-5xl font-bold text-white mb-6">Hubungi Kami</h1>
           <p className="text-xl text-teal-100 max-w-3xl">
-            Kami siap membantu Anda dengan informasi lebih lanjut tentang SMA
-            Harapan Bangsa
+            Kami siap membantu Anda dengan informasi lebih lanjut tentang TPQ
+            Darul Qur'an Miftahul Jannah. Silakan isi formulir di bawah ini atau
+            hubungi kami melalui informasi kontak yang tersedia.
           </p>
         </div>
       </section>
@@ -187,7 +184,7 @@ export default function ContactPage() {
             </h2>
             <div className="h-[600px] rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_URL"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d968.8828510119731!2d110.40491851072811!3d-6.962694204405588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e70f4b91f8f7b79%3A0x7a26e5ddc8e72504!2sYayasan%20Darul%20Qur%C2%B4an%20Miftahul%20Jannah!5e0!3m2!1sid!2sid!4v1750947442214!5m2!1sid!2sid"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

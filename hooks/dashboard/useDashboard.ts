@@ -16,7 +16,7 @@ interface DashboardStats {
   recentStudents: Array<{
     id: string;
     name: string;
-    class: string;
+    className: string;
     createdAt: Timestamp;
   }>;
   recentTeachers: Array<{
@@ -67,7 +67,7 @@ export function useDashboard() {
 
         // Calculate students per class
         const studentsByClass = studentsSnap.docs.reduce((acc, doc) => {
-          const classname = doc.data().class;
+          const classname = doc.data().className;
           acc[classname] = (acc[classname] || 0) + 1;
           return acc;
         }, {} as Record<string, number>);

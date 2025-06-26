@@ -1,47 +1,69 @@
 "use client";
 
-import { FiBook, FiAward, FiUsers } from "react-icons/fi";
+import {
+  FiBook,
+  FiAward,
+  FiUsers,
+  FiFeather,
+  FiClipboard,
+  FiBookOpen,
+} from "react-icons/fi";
 
 export default function AcademicsPage() {
-  const programs = [
+  const programTPQ = [
     {
-      name: "Program IPA",
-      description: "Fokus pada Sains, Matematika, dan Biologi.",
-      icon: FiBook,
+      name: "Kelas Usman",
+      description:
+        "Fokus pada pendalaman ilmu-ilmu Islam fundamental dan pemantapan Al-Qur'an.",
+      icon: FiBookOpen, // Ikon untuk kelas tingkat lanjut/pendalaman ilmu
       subjects: [
-        "Matematika Peminatan",
-        "Fisika",
-        "Kimia",
-        "Biologi",
-        "Informatika",
+        "Bahasa Arab",
+        "Tajwid",
+        "Sirah Nabawi",
+        "Fiqih",
+        "Nisaiyyah (Kajian Wanita)",
+        "Hadits",
+        "Tahsin",
+        "Ngaji Qur'an",
+        "Hafalan Al-Qur'an",
       ],
-      achievements: "85% lulusan diterima di Fakultas Kedokteran dan Teknik",
+      achievements:
+        "Mampu membaca Al-Qur'an dengan tartil dan memahami dasar-dasar fiqih ibadah.",
     },
     {
-      name: "Program IPS",
-      description: "Fokus pada Ekonomi, Sosiologi, dan Sejarah.",
-      icon: FiUsers,
+      name: "Kelas Umar",
+      description:
+        "Fokus pada pengenalan dasar-dasar Islam, praktek ibadah, dan memulai hafalan.",
+      icon: FiClipboard, // Ikon untuk kelas dengan banyak praktek/checklist
       subjects: [
-        "Ekonomi",
-        "Sosiologi",
-        "Geografi",
-        "Sejarah Peminatan",
-        "Akuntansi",
+        "Ngaji Iqro",
+        "Ngaji Al-Qur'an",
+        "Hafalan Al-Qur'an",
+        "Muroja'ah (Mengulang Hafalan)",
+        "Mufrodat (Kosa Kata Arab)",
+        "Tahsin",
+        "Praktek Wudhu",
+        "Praktek Sholat",
+        "Hafalan Dzikir Setelah Sholat",
       ],
-      achievements: "90% lulusan diterima di Fakultas Ekonomi dan Hukum",
+      achievements:
+        "Lancar membaca Iqro/Al-Qur'an dan hafal bacaan serta dzikir sholat dengan benar.",
     },
     {
-      name: "Program Bahasa",
-      description: "Fokus pada Bahasa dan Sastra.",
-      icon: FiAward,
+      name: "Kelas Abu Bakar",
+      description:
+        "Fokus pada pengenalan huruf Hijaiyah (Iqro), hafalan dasar, dan praktek ibadah.",
+      icon: FiFeather, // Ikon untuk kelas pemula/dasar, seperti mulai menulis/membaca
       subjects: [
-        "Bahasa Inggris Peminatan",
-        "Bahasa Jepang",
-        "Sastra Indonesia",
-        "Antropologi",
-        "Linguistik",
+        "Ngaji Iqro",
+        "Hafalan Al-Qur'an",
+        "Muroja'ah (Mengulang Hafalan)",
+        "Praktek Sholat",
+        "Praktek Wudhu",
+        "Hafalan Doa-Doa Pilihan",
       ],
-      achievements: "Juara Olimpiade Bahasa Tingkat Nasional",
+      achievements:
+        "Menyelesaikan Iqro jilid dasar dan hafal doa-doa harian serta surat-surat pendek.",
     },
   ];
 
@@ -60,10 +82,10 @@ export default function AcademicsPage() {
         </div>
       </section>
 
-      {/* Programs Section */}
+      {/* programTPQ Section */}
       <section className="container mx-auto px-6 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {programs.map((program) => (
+          {programTPQ.map((program) => (
             <div
               key={program.name}
               className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-shadow"
@@ -110,21 +132,21 @@ export default function AcademicsPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Klub Akademik",
-                desc: "Olimpiade Sains, Matematika, dan Bahasa",
+                title: "Program Tahfidz Qur'an",
+                desc: "Program intensif bagi santri yang fokus pada hafalan Al-Qur'an dengan target yang terukur.",
               },
               {
-                title: "Program Research",
-                desc: "Penelitian dan Pengembangan Ilmiah",
+                title: "Syiar & Kegiatan Komunitas",
+                desc: "Mengadakan lomba, perayaan hari besar Islam, dan bakti sosial untuk menumbuhkan semangat dakwah.",
               },
               {
-                title: "International Program",
-                desc: "Pertukaran Pelajar dan Studi ke Luar Negeri",
+                title: "Seni Kreativitas Islami",
+                desc: "Mengembangkan bakat santri melalui kegiatan seperti kaligrafi, hadrah (rebana), dan nasyid.",
               },
             ].map((item, index) => (
               <div
                 key={index}
-                className="bg-white/10 backdrop-blur-lg p-6 rounded-xl"
+                className="bg-white/10 backdrop-blur-lg p-6 rounded-xl transform hover:-translate-y-2 transition-transform duration-300"
               >
                 <h3 className="text-xl font-semibold text-white mb-3">
                   {item.title}

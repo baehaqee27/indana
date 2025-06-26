@@ -51,10 +51,10 @@ export default function AdminDashboardPage() {
       title: "Jumlah Kelas",
       value: totalClasses,
       icon: FiGrid,
-      bgColor: "bg-emerald-100",
-      textColor: "text-emerald-600",
-      borderColor: "border-emerald-500",
-      link: "/admin/classes",
+      bgColor: "bg-yellow-100",
+      textColor: "text-yellow-600",
+      borderColor: "border-yellow-500",
+      link: "#",
     },
   ];
 
@@ -117,7 +117,7 @@ export default function AdminDashboardPage() {
                 <div>
                   <p className="font-medium">{student.name}</p>
                   <p className="text-sm text-gray-500">
-                    Kelas: {student.class}
+                    Kelas: {student.className}
                   </p>
                 </div>
                 <span className="text-xs text-gray-400">
