@@ -79,13 +79,13 @@ export default function HomePage() {
             </p>
             <div className="space-x-4">
               <Link
-                href="/tentang" // Sesuaikan dengan path Anda
+                href="/about" // Sesuaikan dengan path Anda
                 className="bg-white text-teal-700 px-8 py-3 rounded-full font-bold hover:bg-teal-50 transition-colors"
               >
                 Tentang Kami
               </Link>
               <Link
-                href="/kontak" // Sesuaikan dengan path Anda
+                href="/contacts" // Sesuaikan dengan path Anda
                 className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold hover:bg-white hover:text-teal-700 transition-colors"
               >
                 Hubungi Kami
