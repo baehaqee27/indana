@@ -224,7 +224,7 @@ export default function HomePage() {
             sejak dini di lingkungan yang positif dan mendukung.
           </p>
           <Link
-            href="/kontak"
+            href="/contacts"
             className="bg-white text-teal-600 px-8 py-3 rounded-full font-bold hover:bg-teal-50 transition-colors"
           >
             Hubungi Kami Sekarang
