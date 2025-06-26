@@ -11,10 +11,10 @@ export default function Navbar() {
   // PENYESUAIAN: Mengubah "Akademik" menjadi "Program"
   const menuItems = [
     { href: "/", label: "Beranda" },
-    { href: "/tentang", label: "Tentang" },
-    { href: "/program", label: "Program" },
-    { href: "/galeri", label: "Galeri" },
-    { href: "/kontak", label: "Kontak" },
+    { href: "/about", label: "Tentang" },
+    { href: "/academics", label: "Program" },
+    { href: "/gallery", label: "Galeri" },
+    { href: "/contacts", label: "Kontak" },
   ];
 
   return (
