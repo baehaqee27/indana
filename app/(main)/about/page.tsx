@@ -2,18 +2,14 @@
 
 import Image from "next/image";
 import { FiStar } from "react-icons/fi";
+import { useTeachers } from "@/hooks/teachers/useTeachers";
 
 export default function AboutPage() {
-  const gallery = [
-    { src: "/galeri/1.jpg", alt: "Gedung Sekolah" },
-    { src: "/galeri/2.jpg", alt: "Laboratorium" },
-    { src: "/galeri/3.jpg", alt: "Perpustakaan" },
-    { src: "/galeri/4.jpg", alt: "Fasilitas Olahraga" },
-    { src: "/galeri/5.jpg", alt: "Ruang Kelas" },
-    { src: "/galeri/6.jpg", alt: "Kantin" },
-    { src: "/galeri/7.jpg", alt: "Masjid" },
-    { src: "/galeri/field.jpg", alt: "Lapangan" },
-  ];
+  const {
+    teachers,
+    loading: teachersLoading,
+    error: teachersError,
+  } = useTeachers();
 
   const testimonials = [
     {
@@ -126,27 +122,70 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Galeri Section */}
+      {/* Guru Section */}
       <section className="bg-gradient-to-r from-teal-800 to-teal-900 py-24 my-16">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center text-white mb-16">
-            Galeri TPQ
+            Guru TPQ
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {gallery.map((item, index) => (
-              <div
-                key={index}
-                className="relative h-64 overflow-hidden rounded-xl shadow-lg"
-              >
-                <Image
-                  src={item.src}
-                  alt={item.alt}
-                  fill
-                  className="object-cover hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-            ))}
-          </div>
+          {teachersLoading ? (
+            <div className="text-center text-white">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-white mx-auto"></div>
+              <p className="mt-2">Memuat data guru...</p>
+            </div>
+          ) : teachersError ? (
+            <div className="text-center text-red-300">
+              <p className="text-xl">Error: {teachersError}</p>
+            </div>
+          ) : teachers.length === 0 ? (
+            <div className="text-center text-white">
+              <p className="text-xl">Belum ada data guru yang tersedia.</p>
+            </div>
+          ) : (
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {teachers.map((teacher, index) => (
+                <div
+                  key={index}
+                  className="relative h-64 overflow-hidden rounded-xl shadow-lg bg-white"
+                >
+                  {teacher.photoURL ? (
+                    <Image
+                      src={teacher.photoURL}
+                      alt={teacher.name}
+                      fill
+                      className="object-cover hover:scale-110 transition-transform duration-500"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        target.style.display = "none";
+                        const parent = target.parentElement;
+                        if (parent) {
+                          const fallback = parent.querySelector("div");
+                          if (fallback) {
+                            fallback.style.display = "flex";
+                          }
+                        }
+                      }}
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-gray-200">
+                      <span className="text-gray-500">Tidak ada foto</span>
+                    </div>
+                  )}
+                  {teacher.photoURL && (
+                    <div
+                      className="w-full h-full flex items-center justify-center bg-gray-200"
+                      style={{ display: "none" }}
+                    >
+                      <span className="text-gray-500">Gagal memuat foto</span>
+                    </div>
+                  )}
+                  <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-50 text-white p-2 text-center">
+                    <p className="font-semibold">{teacher.name}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

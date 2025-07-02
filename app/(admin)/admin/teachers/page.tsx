@@ -19,7 +19,9 @@ export default function ManageTeachersPage() {
     name: "",
     address: "",
     dateOfBirth: "", // Use string for form input
+    photoURL: "",
   });
+  const [photoFile, setPhotoFile] = useState<File | null>(null);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,13 +36,23 @@ export default function ManageTeachersPage() {
 
       if (currentTeacher.id) {
         // If updating, ensure the ID is passed correctly
-        await updateTeacher(currentTeacher.id, teacherToSave);
+        await updateTeacher(
+          currentTeacher.id,
+          teacherToSave,
+          photoFile || undefined
+        );
       } else {
-        await addTeacher(teacherToSave);
+        await addTeacher(teacherToSave, photoFile || undefined);
       }
       setIsModalOpen(false);
       // Reset to initial empty state for the next new teacher
-      setCurrentTeacher({ name: "", address: "", dateOfBirth: "" });
+      setCurrentTeacher({
+        name: "",
+        address: "",
+        dateOfBirth: "",
+        photoURL: "",
+      });
+      setPhotoFile(null);
     } catch (err) {
       console.error("Error submitting form:", err);
       alert("Gagal menyimpan data guru. Silakan coba lagi."); // User feedback
@@ -60,7 +72,8 @@ export default function ManageTeachersPage() {
 
   // Function to open modal for adding a new teacher
   const handleAddTeacherClick = () => {
-    setCurrentTeacher({ name: "", address: "", dateOfBirth: "" }); // Reset for new entry
+    setCurrentTeacher({ name: "", address: "", dateOfBirth: "", photoURL: "" }); // Reset for new entry
+    setPhotoFile(null);
     setIsModalOpen(true);
   };
 
@@ -73,6 +86,7 @@ export default function ManageTeachersPage() {
         ? teacher.dateOfBirth.toDate().toISOString().split("T")[0]
         : "",
     });
+    setPhotoFile(null);
     setIsModalOpen(true);
   };
 
@@ -117,6 +131,9 @@ export default function ManageTeachersPage() {
               <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Tgl. Lahir
               </th>
+              <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                Foto
+              </th>
               <th className="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
                 Aksi
               </th>
@@ -135,6 +152,17 @@ export default function ManageTeachersPage() {
                   {teacher.dateOfBirth
                     ? teacher.dateOfBirth.toDate().toLocaleDateString("id-ID")
                     : "N/A"}
+                </td>
+                <td className="px-6 py-4 whitespace-nowrap">
+                  {teacher.photoURL ? (
+                    <img
+                      src={teacher.photoURL}
+                      alt={teacher.name}
+                      className="w-10 h-10 object-cover rounded-full"
+                    />
+                  ) : (
+                    <span>Tidak ada foto</span>
+                  )}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap text-right">
                   <button
@@ -226,6 +254,33 @@ export default function ManageTeachersPage() {
                   className="w-full p-2 border rounded focus:ring-teal-500 focus:border-teal-500"
                   required
                 />
+              </div>
+              <div>
+                <label
+                  htmlFor="photo"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Foto Guru
+                </label>
+                <input
+                  type="file"
+                  id="photo"
+                  accept="image/*"
+                  onChange={(e) =>
+                    setPhotoFile(e.target.files ? e.target.files[0] : null)
+                  }
+                  className="w-full p-2 border rounded focus:ring-teal-500 focus:border-teal-500"
+                />
+                {currentTeacher.photoURL && (
+                  <div className="mt-2">
+                    <img
+                      src={currentTeacher.photoURL}
+                      alt="Current Photo"
+                      className="w-20 h-20 object-cover rounded"
+                    />
+                    <p className="text-sm text-gray-500">Foto saat ini</p>
+                  </div>
+                )}
               </div>
               <div className="flex justify-end space-x-2 mt-6">
                 <button

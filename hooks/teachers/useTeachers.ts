@@ -33,10 +33,26 @@ export function useTeachers() {
     }
   };
 
-  const addTeacher = async (teacher: Omit<Teacher, "id">) => {
+  const addTeacher = async (teacher: Omit<Teacher, "id">, photo?: File) => {
     try {
+      let photoURL: string | undefined;
+      if (photo) {
+        const formData = new FormData();
+        formData.append("file", photo);
+        const response = await fetch("/api/upload-teacher-photo", {
+          method: "POST",
+          body: formData,
+        });
+        const data = await response.json();
+        if (response.ok) {
+          photoURL = data.url;
+        } else {
+          throw new Error(data.error || "Failed to upload photo");
+        }
+      }
       const newTeacher = {
         ...teacher,
+        photoURL,
         createdAt: Timestamp.now(),
       };
       await addDoc(collection(db, "teachers"), newTeacher);
@@ -47,9 +63,28 @@ export function useTeachers() {
     }
   };
 
-  const updateTeacher = async (id: string, data: Partial<Teacher>) => {
+  const updateTeacher = async (
+    id: string,
+    data: Partial<Teacher>,
+    photo?: File
+  ) => {
     try {
-      await updateDoc(doc(db, "teachers", id), data);
+      let updatedData = { ...data };
+      if (photo) {
+        const formData = new FormData();
+        formData.append("file", photo);
+        const response = await fetch("/api/upload-teacher-photo", {
+          method: "POST",
+          body: formData,
+        });
+        const result = await response.json();
+        if (response.ok) {
+          updatedData.photoURL = result.url;
+        } else {
+          throw new Error(result.error || "Failed to upload photo");
+        }
+      }
+      await updateDoc(doc(db, "teachers", id), updatedData);
       await fetchTeachers();
     } catch (err) {
       setError("Failed to update teacher");

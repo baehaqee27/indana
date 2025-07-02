@@ -9,7 +9,6 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Kolom 4: Jam Operasional diganti dengan Logo */}
           <div>
-            {/* PERUBAHAN UTAMA DI SINI */}
             <Image
               src="/logo1.png"
               alt="Logo Afiliasi TPQ"
