@@ -114,9 +114,9 @@ export default function AboutPage() {
             <h2 className="text-3xl font-semibold text-teal-600 mb-6">Misi</h2>
             <ul className="list-disc list-inside text-gray-700 space-y-4 text-lg">
               <li>Menekankan adab dan akhlaq</li>
-              <li>Mempelajari berbagai pelajaran sesuai tuntunan syar'i</li>
               <li>Mengembangkan potensi anak pada bidangnya</li>
               <li>Menghafal Al-Qur'an sesuai kaidah ilmu tajwid</li>
+              <li>Mempelajari berbagai pelajaran sesuai tuntunan syar'i</li>
             </ul>
           </div>
         </div>

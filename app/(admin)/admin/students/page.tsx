@@ -129,7 +129,7 @@ export default function ManageStudentsPage() {
       </div>
 
       {/* Table */}
-      <div className="bg-white rounded-lg shadow-md overflow-hidden text-gray-800">
+      <div className="bg-white rounded-lg shadow-md overflow-hidden text-gray-800 overflow-x-auto">
         <table className="w-full table-auto">
           <thead className="bg-gray-50">
             <tr>
