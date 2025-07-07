@@ -146,14 +146,14 @@ export default function AboutPage() {
               {teachers.map((teacher, index) => (
                 <div
                   key={index}
-                  className="relative h-64 overflow-hidden rounded-xl shadow-lg bg-white"
+                  className="relative min-h-72 md:min-h-80 aspect-[3/4] overflow-hidden rounded-xl shadow-lg bg-white"
                 >
                   {teacher.photoURL ? (
                     <Image
                       src={teacher.photoURL}
                       alt={teacher.name}
                       fill
-                      className="object-cover hover:scale-110 transition-transform duration-500"
+                      className="object-contain hover:scale-110 transition-transform duration-500"
                       onError={(e) => {
                         const target = e.currentTarget;
                         target.style.display = "none";

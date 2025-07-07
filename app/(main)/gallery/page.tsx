@@ -68,7 +68,56 @@ export default function GalleryPage() {
       alt: "Kegiatan Keagamaan",
       category: "Keagamaan",
     },
-    // Add more images as needed
+    {
+      src: "/galeri/13.jpeg",
+      alt: "Kegiatan Keagamaan",
+      category: "Keagamaan",
+    },
+    {
+      src: "/galeri/14.jpeg",
+      alt: "Kegiatan Keagamaan",
+      category: "Keagamaan",
+    },
+    {
+      src: "/galeri/15.jpeg",
+      alt: "Futsal",
+      category: "Olahraga",
+    },
+    {
+      src: "/galeri/16.jpeg",
+      alt: "Futsal",
+      category: "Olahraga",
+    },
+    {
+      src: "/galeri/17.jpeg",
+      alt: "Kegiatan Keagamaan",
+      category: "Keagamaan",
+    },
+    {
+      src: "/galeri/18.jpeg",
+      alt: "Kegiatan Keagamaan",
+      category: "Keagamaan",
+    },
+    {
+      src: "/galeri/19.jpeg",
+      alt: "Kegiatan Keagamaan",
+      category: "Keagamaan",
+    },
+    {
+      src: "/galeri/20.jpeg",
+      alt: "GYM",
+      category: "Olahraga",
+    },
+    {
+      src: "/galeri/21.jpeg",
+      alt: "Rebana",
+      category: "Keagamaan",
+    },
+    {
+      src: "/galeri/22.jpeg",
+      alt: "Kegiatan Qurban",
+      category: "Keagamaan",
+    },
   ];
 
   const handlePrevious = () => {
@@ -88,7 +137,7 @@ export default function GalleryPage() {
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-teal-800 to-teal-900 py-24 mb-16">
         <div className="container mx-auto px-6">
-          <h1 className="text-5xl font-bold text-white mb-6">Galeri Sekolah</h1>
+          <h1 className="text-5xl font-bold text-white mb-6">Galeri TPQ</h1>
           <p className="text-xl text-teal-100 max-w-3xl">
             Jelajahi fasilitas dan kegiatan di TPQ Darul Quran Miftahul Jannah
             melalui koleksi foto kami
