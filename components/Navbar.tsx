@@ -32,7 +32,7 @@ export default function Navbar() {
               className="h-10 w-10" // Menyesuaikan ukuran jika perlu
             />
             <span className="font-bold text-lg md:text-xl text-teal-600">
-              TPQ Darul Quran Miftahul Jannah
+              LPQ Darul Quran Miftahul Jannah
             </span>
           </Link>
 

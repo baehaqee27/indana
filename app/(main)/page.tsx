@@ -11,6 +11,7 @@ import {
   FiSmile,
   FiBookOpen,
 } from "react-icons/fi";
+import { FaQuoteLeft } from "react-icons/fa";
 import { useDashboard } from "@/hooks/dashboard/useDashboard";
 
 export default function HomePage() {
@@ -92,6 +93,32 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Sambutan Pengasuh Section - Modern Quote Style */}
+      <section className="py-20 bg-teal-50">
+        <div className="container mx-auto px-6 text-center">
+          <FaQuoteLeft className="w-16 h-16 text-teal-200 mx-auto mb-6" />
+          <blockquote className="max-w-3xl mx-auto">
+            <p className="text-2xl md:text-3xl font-medium text-gray-700 leading-relaxed mb-8">
+              &quot;Pendidikan Al-Qur&apos;an adalah cahaya yang menerangi jalan anak-anak kita. Di sini, kami berkomitmen untuk tidak hanya mengajar, tetapi juga menginspirasi dan membentuk generasi Qur&apos;ani yang berakhlak mulia dan penuh cinta.&quot;
+            </p>
+            <footer className="flex items-center justify-center">
+              <div className="relative w-16 h-16 rounded-full overflow-hidden mr-4">
+                <Image
+                  src="/logo.png" // Ganti dengan foto pengasuh
+                  alt="Pengasuh TPQ"
+                  layout="fill"
+                  objectFit="cover"
+                />
+              </div>
+              <div>
+                <cite className="text-xl font-semibold text-gray-800 not-italic">[Nama Pengasuh]</cite>
+                <p className="text-gray-500">Pengasuh TPQ Darul Quran Miftahul Jannah</p>
+              </div>
+            </footer>
+          </blockquote>
         </div>
       </section>
 

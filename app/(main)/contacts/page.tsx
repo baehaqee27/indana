@@ -78,7 +78,7 @@ export default function ContactPage() {
         <div className="container mx-auto px-6">
           <h1 className="text-5xl font-bold text-white mb-6">Hubungi Kami</h1>
           <p className="text-xl text-teal-100 max-w-3xl">
-            Kami siap membantu Anda dengan informasi lebih lanjut tentang TPQ
+            Kami siap membantu Anda dengan informasi lebih lanjut tentang LPQ
             Darul Qur'an Miftahul Jannah. Silakan isi formulir di bawah ini atau
             hubungi kami melalui informasi kontak yang tersedia.
           </p>

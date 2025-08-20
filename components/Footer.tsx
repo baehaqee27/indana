@@ -20,7 +20,7 @@ export default function Footer() {
           {/* Kolom 1: Tentang TPQ */}
           <div>
             <h3 className="text-xl font-bold mb-4">
-              TPQ Darul Quran Miftahul Jannah
+              LPQ Darul Quran Miftahul Jannah
             </h3>
             {/* Penyesuaian: Menggunakan tagline yang sudah disepakati */}
             <p className="text-gray-400">
@@ -82,7 +82,7 @@ export default function Footer() {
         <div className="border-t border-gray-800 mt-10 pt-8 text-center text-gray-400">
           <p>
             {/* Penyesuaian: Mengubah tahun ke tahun sekarang */}
-            &copy; {new Date().getFullYear()} TPQ Darul Quran Miftahul Jannah.
+            &copy; {new Date().getFullYear()} LPQ Darul Quran Miftahul Jannah.
             All rights reserved.
           </p>
         </div>

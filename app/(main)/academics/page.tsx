@@ -13,6 +13,7 @@ export default function AcademicsPage() {
   const programTPQ = [
     {
       name: "Kelas Usman",
+      jenjang: "SMP keatas",
       description:
         "Fokus pada pendalaman ilmu-ilmu Islam fundamental dan pemantapan Al-Qur'an.",
       icon: FiBookOpen, // Ikon untuk kelas tingkat lanjut/pendalaman ilmu
@@ -32,6 +33,7 @@ export default function AcademicsPage() {
     },
     {
       name: "Kelas Umar",
+      jenjang: "SD kelas 4-6",
       description:
         "Fokus pada pengenalan dasar-dasar Islam, praktek ibadah, dan memulai hafalan.",
       icon: FiClipboard, // Ikon untuk kelas dengan banyak praktek/checklist
@@ -51,6 +53,7 @@ export default function AcademicsPage() {
     },
     {
       name: "Kelas Abu Bakar",
+      jenjang: "TK - SD kelas 3",
       description:
         "Fokus pada pengenalan huruf Hijaiyah (Iqro), hafalan dasar, dan praktek ibadah.",
       icon: FiFeather, // Ikon untuk kelas pemula/dasar, seperti mulai menulis/membaca
@@ -94,9 +97,13 @@ export default function AcademicsPage() {
                 <div className="bg-teal-100 p-3 rounded-full mr-4">
                   <program.icon className="w-8 h-8 text-teal-600" />
                 </div>
-                <h2 className="text-2xl font-semibold text-gray-800">
-                  {program.name}
-                </h2>
+                <div>
+                  <h2 className="text-2xl font-semibold text-gray-800">
+                    {program.name}
+                  </h2>
+                  <div className="border-b border-gray-200 my-2"></div> {/* Separator line */}
+                  <p className="text-gray-500 text-sm">{program.jenjang}</p> {/* Jenjang */}
+                </div>
               </div>
               <p className="text-gray-600 mb-6 text-lg">
                 {program.description}
